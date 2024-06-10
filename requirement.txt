@@ -1,0 +1,13 @@
+numpy==1.25.2
+pandas==2.0.3
+matplotlib==3.7.1
+openai==1.33.0
+langchain==0.2.3
+pymupdf4llm==0.0.3
+seaborn==0.13.1
+pymupdf==1.24.5
+pinecone-client==4.1.1
+ipython
+flask
+gunicorn==20.0.3
+wheel
