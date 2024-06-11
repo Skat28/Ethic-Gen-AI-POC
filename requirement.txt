@@ -11,3 +11,4 @@ ipython
 flask
 gunicorn==20.0.3
 wheel
+boto3
