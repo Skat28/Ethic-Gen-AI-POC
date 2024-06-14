@@ -121,7 +121,7 @@ def to_be_executed(file_name):
     my_splitter = RecursiveCharacterTextSplitter( chunk_size=500, chunk_overlap = 100, length_function = len)
     chunks = my_splitter.split_text(md_text)
 
-    print('created openai client')
+    # print('created openai client')
 
     print(f'did chunking adn created index_df')
   # split the data in sections
