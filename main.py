@@ -40,13 +40,13 @@ def main():
                     processed_message_ids.append(current_message_id)
                     body_str = message['Body']
                     body_dict = json.loads(body_str)
-                    # print(f'\ncurrently processed_message_ids:{processed_message_ids}\n\n')
+                    print(f'\ncurrently processed_message_ids:{processed_message_ids}\n\n')
                     s3_bucket_info = body_dict['Records'][0]['s3']['bucket']
                     s3_content_info = body_dict['Records'][0]['s3']['object']
 
                     file_name=s3_content_info['key']
                     bucket_name=s3_bucket_info['name']
-                    # print(f'filename:{file_name} and bucket:{bucket_name}')
+                    print(f'filename:{file_name} and bucket:{bucket_name}')
                     # import boto3
 
                     s3 = boto3.client('s3')
@@ -63,7 +63,7 @@ def main():
 
                     to_be_executed(file_name[:-4])
 
-                    # Delete received message from queue
+                    Delete received message from queue
                     sqs.delete_message(
                         QueueUrl=queue_url,
                         ReceiptHandle=receipt_handle
