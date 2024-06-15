@@ -19,9 +19,12 @@ RUN apt install -y python3.10-venv
 RUN python -m venv env
 RUN /bin/bash -c "source env/bin/activate"
 RUN pip3.10 install -r requirement.txt
-RUN set -o allexport; source ".env"; set +o allexport
-ENV OPENAI_API_KEY="${OPENAI_API_KEY}"
-ENV PINECONE_API_KEY="${PINECONE_API_KEY}"
-ENV AWS_ACCESS_KEY_ID="${AWS_ACCESS_KEY_ID}"
-ENV AWS_SECRET_ACCESS_KEY="${AWS_SECRET_ACCESS_KEY}"
+
+#WORKDIR ./Ethic-Gen-AI-POC
+#RUN set -o allexport; source ".env"; set +o allexport
+#ENV OPENAI_API_KEY=$OPENAI_API_KEY
+
+#ENV PINECONE_API_KEY="${PINECONE_API_KEY}"
+#ENV AWS_ACCESS_KEY_ID="${AWS_ACCESS_KEY_ID}"
+#ENV AWS_SECRET_ACCESS_KEY="${AWS_SECRET_ACCESS_KEY}"
 #ENV AWS_SESSION_TOKEN=${AWS_SESSION_TOKEN}
