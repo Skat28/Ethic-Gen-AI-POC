@@ -1,0 +1,6 @@
+OPENAI_API_KEY=abc
+PINECONE_API_KEY=abc
+aws_region=abc
+AWS_ACCESS_KEY_ID=abc
+AWS_SECRET_ACCESS_KEY=abc
+aws_default_format=json
