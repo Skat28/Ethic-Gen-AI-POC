@@ -19,4 +19,4 @@ RUN apt install -y python3.10-venv
 RUN python -m venv env
 RUN /bin/bash -c "source env/bin/activate"
 RUN pip3.10 install -r requirement.txt
-
+CMD ["python", "main.py"]
